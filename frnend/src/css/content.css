@@ -1,0 +1,30 @@
+.content{
+    margin-top: 5rem;
+}
+.grid-C{
+    display: grid;
+    grid-template-columns:auto auto auto auto;
+    row-gap: 10vw;
+    justify-content: space-evenly;
+}
+.grid-C-content{
+    border-radius: 50px;
+    height: auto;
+    width: 20vw;
+    box-shadow: 15px 15px rgba(255, 0, 0, 0.329);
+    background-color:  #1B3D81;
+    color: aliceblue;
+    text-align: center;
+    font-size:medium;
+    padding: 30px;
+}
+.grid-C-content:hover{
+    box-shadow: 20px 20px rgba(255, 0, 0, 0.329);
+    font-size: large;
+    transition: 1s ;
+    /* height: 52vh;
+    width: 22vw; */
+}
+.grid-C-content >img{
+    width: 50%;
+}

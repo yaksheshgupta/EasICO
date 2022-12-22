@@ -1,0 +1,14 @@
+.connect{
+    text-align: center;
+    justify-content: center;
+    font-size: x-large;
+    padding-bottom: 2rem;
+}
+input{
+    align-content: center;
+    width:50vw;
+}
+.connect:hover{
+    background-color: darkkhaki;
+    transition: 2s;
+}

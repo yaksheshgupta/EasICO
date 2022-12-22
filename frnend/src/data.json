@@ -1,0 +1,65 @@
+{"product":[
+
+    {
+        "id":"/img/bitcoin.png",
+        "name":"BITCOIN",
+        "symbol":"BTC",
+        "disc":"it caoigrewiguwbregyvewifubhjufygbwdsbkjbwefkjweabkjsn do this",
+        "price":"1 Eth"
+    },
+    
+    {
+        "id":"/img/eth.png",
+        "name":"Nikita",
+        "symbol":"BTC",
+        "disc":"it caoigrewiguwbregyvewifubhjufygbwdsbkjbwefkjweabkjsn do this",
+        "price":"1 Eth"
+    },
+    
+    {
+        "id":"/img/binance.png",
+        "name":"Deeksha",
+        "symbol":"BTC",
+        "disc":"it caoigrewiguwbregyvewifubhjufygbwdsbkjbwefkjweabkjsn do this",
+        "price":"1 Eth"
+    },
+    
+    {
+        "id":"/img/tether.png",
+        "name":"Ritesh",
+        "symbol":"BTC",
+        "disc":"it caoigrewiguwbregyvewifubhjufygbwdsbkjbwefkjweabkjsn do this",
+        "price":"1 Eth"
+    },
+    
+    {
+        "id":"/img/lg.png",
+        "name":"Somya",
+        "symbol":"BTC",
+        "disc":"it caoigrewiguwbregyvewifubhjufygbwdsbkjbwefkjweabkjsn do this",
+        "price":"1 Eth"
+    },
+    
+    {
+        "id":"/img/lg.png",
+        "name":"Eshika",
+        "symbol":"BTC",
+        "disc":"it caoigrewiguwbregyvewifubhjufygbwdsbkjbwefkjweabkjsn do this",
+        "price":"1 Eth"
+    },
+    {
+        "id":"/img/lg.png",
+        "name":"Kalpana",
+        "symbol":"BTC",
+        "disc":"it caoigrewiguwbregyvewifubhjufygbwdsbkjbwefkjweabkjsn do this",
+        "price":"1 Eth"
+    },
+    
+    {
+        "id":"/img/lg.png",
+        "name":"Parul",
+        "symbol":"BTC",
+        "disc":"it caoigrewiguwbregyvewifubhjufygbwdsbkjbwefkjweabkjsn do this",
+        "price":"1 Eth"
+    }
+]}

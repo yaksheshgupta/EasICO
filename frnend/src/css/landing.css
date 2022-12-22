@@ -1,0 +1,25 @@
+.grid{
+    display: grid;
+    grid-template-rows: auto;
+    justify-content: center;
+    padding-top: 2rem;
+}
+.grid-element{
+    background-color: rgba(47, 168, 255, 0.322);
+    backdrop-filter: blur(50px);
+    height: 75vh ;
+    width: 90vw;
+    border-radius: 10px;
+    box-shadow:15px 15px 15px 15px rgba(255, 0, 0, 0.329);
+}
+.grid-element:hover{
+    background-color: rgba(47, 196, 255, 0.598);
+    box-shadow:15px 15px 15px 15px rgba(30, 30, 30, 0.329);
+}
+.text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-style: italic;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}

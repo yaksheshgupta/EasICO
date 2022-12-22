@@ -1,0 +1,42 @@
+.grid-buy{
+    display: grid;
+    grid-template-columns:auto;
+    align-content: center; 
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50% ;
+}
+.grid-buy-container{
+    padding: 20px;
+    border-radius: 50px;
+    background-color: rgb(47, 168, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.buy-grid-inside{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    /* gap: 15%; */
+}
+.grid-inside-buy-container{
+    background-color: rgba(0, 0, 0, 0.322);
+    text-align: center;
+    font-size: large;
+}
+/* .grid-inside-buy-container>button{
+
+    margin:20px;
+}
+.grid-inside-buy-container>button:hover{
+    width: 20%;
+} */
+.buy-grid-inside>img{
+    height: 40%;
+}

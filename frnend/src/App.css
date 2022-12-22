@@ -1,0 +1,29 @@
+html {
+  scroll-behavior: smooth;
+}
+body{
+  margin: 0;
+  /* background-color:  #1B3D81; */
+  background-color: rgb(86, 86, 86);
+  word-wrap:break-word;
+}
+
+button{
+  background-color: rgb(157, 157, 157);
+  height: 3rem;
+  border-radius: 10px;
+  box-shadow: 5px 5px red;
+  width: auto;
+  min-width: 6rem;
+  text-align: center;
+  line-height: 15px;
+  margin: 20px;
+}
+button:hover {
+  width: auto;
+  min-width: 7rem;
+  height: 3.5rem;
+  background-color: cadetblue;
+  box-shadow: 8px 8px rgb(0, 72, 255);
+  transition: 1s ;
+}

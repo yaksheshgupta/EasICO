@@ -1,0 +1,9 @@
+.caution{
+    position:sticky;
+    bottom: 0;
+    height: 6vh;
+    background-color: rgba(139, 139, 139, 0.931);
+    text-align: center;
+    color: rgb(241, 42, 42);
+    font-size: large;
+}
