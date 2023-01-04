@@ -4,8 +4,9 @@ import Footer from "./components/footer";
 import Landing from "./components/landing";
 import Navbar from "./components/navbar";
 import Enter from "./components/enter";
-import { SendTransaction } from "./components/test";
+import { LoadComp } from "./components/test";
 import Caution from "./components/caution";
+import Buy from "./components/buy";
 export const first = () => {
     return (<>
         <Navbar />
@@ -28,6 +29,6 @@ export const form = () => {
 }
 export const test=()=>{
     return(
-        <SendTransaction/>
+        <LoadComp/>
     )
 }

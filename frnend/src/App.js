@@ -1,8 +1,7 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import * as link from "./links.js";
-import { useAccount, useConnect, useDisconnect, WagmiConfig } from 'wagmi'
-
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import "./App.css";
+import { useAccount,WagmiConfig } from 'wagmi'
 import {
   EthereumClient,
   modalConnectors,
@@ -11,17 +10,14 @@ import {
 import { Web3Modal } from "@web3modal/react";
 import { configureChains, createClient } from "wagmi";
 //   import {  configureChains, createClient, WagmiConfig } from "wagmi";
-
-import { polygonMumbai } from 'wagmi/chains'
+import { mainnet,polygonMumbai} from 'wagmi/chains'
 
 // const chains = [ chain.polygon, chain.optimism, chain.arbitrum];
 
 // Wagmi client
-
-const { chains, provider } = configureChains([polygonMumbai], [
-  walletConnectProvider({ projectId: "d15eb86d73c6637da9fc023d24c7ffcd" }),
+const { chains, provider } = configureChains([mainnet,polygonMumbai], [
+  walletConnectProvider({ projectId: "80b4f7a51140d759cb3f5da9dbe09b51" }),
 ]);
-
 const wagmiClient = createClient({
   autoConnect: true,
   connectors: modalConnectors({ appName: "web3Modal", chains }),
@@ -42,12 +38,10 @@ function App() {
             <Route exact path='/form' element={link.form()}></Route>
             <Route exact path='/test' element={link.test()}></Route>
           </Routes>
-          {/* <Connect/> */}
-          {/* <Buy/> */}
         </Router>
       </WagmiConfig>
       <Web3Modal
-        projectId="d15eb86d73c6637da9fc023d24c7ffcd"
+        projectId="80b4f7a51140d759cb3f5da9dbe09b51"
         ethereumClient={ethereumClient}
       />
     </>

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useContractRead, useAccount } from 'wagmi';
-export function SendTransaction() {
+import { useSendTransaction, usePrepareSendTransaction } from 'wagmi'
+export function LoadComp({ param }) {
   // Declare a new state variable, which we'll call "param"
-  const [param, setParam] = useState("");
 
   const { data, isError, isLoading } = useContractRead({
     address: "0x7606aAe0feB68EC1eFCAca16ff4DA9bD0dA755e7",
@@ -413,13 +413,13 @@ export function SendTransaction() {
         "type": "function"
       }
     ],
-    functionName: "name",
+    functionName: param,
     // args: ["10"]
   });
   const { address, isConnecting, isDisconnected } = useAccount()
   return (
     <div>
-      {typeof(data)=='number' ? data:data.toString() }
+      {typeof (data) == 'number' ? data : data.toString()}
 
       {isLoading && (
         <div>
@@ -432,92 +432,21 @@ export function SendTransaction() {
         </div>
       )}
       <br />
-      {address}
     </div>
   );
 }
-
-
-
-
-// import * as React from 'react'
-// import { useDebounce } from 'use-debounce'
-// import {
-//     usePrepareSendTransaction,
-//     useSendTransaction,
-//     useWaitForTransaction,
-// } from 'wagmi'
-// import { utils } from 'ethers'
-
-// export function SendTransaction() {
-//     const [to, setTo] = React.useState('')
-//     const [debouncedTo] = useDebounce(to, 500)
-
-//     const [amount, setAmount] = React.useState('')
-//     const [debouncedAmount] = useDebounce(amount, 500)
-
-//     const { config } = usePrepareSendTransaction({
-//         request: {
-//             to: debouncedTo,
-//             value: debouncedAmount ? utils.parseEther(debouncedAmount) : undefined,
-//         },
-//     })
-//     const { data, sendTransaction } = useSendTransaction(config)
-
-//     const { isLoading, isSuccess } = useWaitForTransaction({
-//         hash: data?.hash,
-//     })
-
-//     return (
-//         <form
-//             onSubmit={(e) => {
-//                 e.preventDefault()
-//                 sendTransaction?.()
-//             }}
-//         >
-//             <input
-//                 aria-label="Recipient"
-//                 onChange={(e) => setTo(e.target.value)}
-//                 placeholder="0xA0Cf…251e"
-//                 value={to}
-//             />
-//             <input
-//                 aria-label="Amount (ether)"
-//                 onChange={(e) => setAmount(e.target.value)}
-//                 placeholder="0.05"
-//                 value={amount}
-//             />
-//             <button disabled={isLoading || !sendTransaction || !to || !amount}>
-//                 {isLoading ? 'Sending...' : 'Send'}
-//             </button>
-//             {isSuccess && (
-//                 <div>
-//                     Successfully sent {amount} ether to {to}
-//                     <div>
-//                         <a href={`https://etherscan.io/tx/${data?.hash}`}>Etherscan</a>
-//                     </div>
-//                 </div>
-//             )}
-//         </form>
-//     )
-// }
-
-
-
-// address: '0xA8F27971cdAb33E8F6e2a32Bc75f47e24e46b6b7',
-//         abi: [
-//             {
-//                 "inputs": [],
-//                 "name": "print",
-//                 "outputs": [
-//                     {
-//                         "internalType": "string",
-//                         "name": "",
-//                         "type": "string"
-//                     }
-//                 ],
-//                 "stateMutability": "pure",
-//                 "type": "function"
-//             }
-//         ],
-//         functionName: 'print',
+// exa9aC9956D663fD249411b766DEc60D890bDda85
+export function Investtkn({ amount }) {
+    const { config } = usePrepareSendTransaction({
+      request: { to: '0x569402E6D161155e6C77632ac35908305da4E7a0', value: { amount } },
+    })
+    const { data, isLoading, isSuccess, sendTransaction } =
+      useSendTransaction(config)
+    return (
+      <div>
+        <button disabled={!sendTransaction} onClick={() => sendTransaction?.()}> Invest Now</button>
+        {isLoading && <div>Check Wallet</div>}
+        {isSuccess && <div>Transaction: {JSON.stringify(data)}</div>}
+      </div>
+    )
+}
